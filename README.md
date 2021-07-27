@@ -1,5 +1,5 @@
 # haskython
-Haskython: Haskell to Python (Python Library)
+Haskython: Haskell and Python Conversion (Python Library)
 
 \
 
