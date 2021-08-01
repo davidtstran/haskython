@@ -10,3 +10,8 @@ Converting Haskell into Python Code:
 1. Add Haskell (.hs) File to haskython/src
 2. Change Directory into haskython/src 
 3. Run "python haskell_to_python.py file.hs" 
+
+Converting Python into Haskell Code: 
+1. Add Python (.py) File to haskython/src
+2. Change Directory into haskython/src 
+3. Run "python python_to_haskell.py file.py" 

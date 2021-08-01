@@ -3,7 +3,7 @@ from haskell_to_python import parseFunctionDeclaration, parseChoices, collectFun
 import unittest
 
 
-class TestHaskellToPython(unittest.TestCase):
+class TestUnitHaskellToPython(unittest.TestCase):
 
     def test_parseFunctionDeclaration(self):
         declaration = "incList :: [Integer] -> [Integer]"

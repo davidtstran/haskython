@@ -2,7 +2,7 @@
 # Haskython: Haskell and Python Conversion (Python Library)
 
 ###
-#    Run 'python haskell_to_python-py' to use:
+#    Run 'python haskell_to_python.py' to use:
 #        haskell_test.hs
 #    Run 'python haskell_to_python.py file.hs' to use:
 #        file.hs
@@ -22,7 +22,7 @@ NEW_LINE = "\n"
 def main(haskellFile):
     '''
     Open haskell file haskell.hs
-    Create new haskell file haskell_haskython.py
+    Create new Python file haskell_haskython.py
     Converts haskell code to Python code
     Append Python code to new file
     '''
@@ -153,7 +153,7 @@ def collectFunctionMethod(code, parameters):
         subseq_param = f", integer{i-1}"
         if subseq_param in return_line:
             return_line = return_line.replace(subseq_param, f"{subseq_param},")
-    print(code, parameters)
+
     return return_line
 
 
