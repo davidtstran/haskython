@@ -2,16 +2,16 @@
 # Haskython: Haskell and Python Conversion (Python Library)
 
 ###
-#    Run 'python haskell-to-python-py' to use:
-#        haskell-test.hs
-#    Run 'python haskell-to-python.py file.hs' to use:
+#    Run 'python haskell_to_python-py' to use:
+#        haskell_test.hs
+#    Run 'python haskell_to_python.py file.hs' to use:
 #        file.hs
 ###
 
 
 import sys
 
-HASKELL_FILE = "haskell-test.hs"
+HASKELL_FILE = "haskell_test.hs"
 FUNCTION_DECLARATION = "::"
 PARAMETER_DECLARATION = "->"
 LIST_DELIMITER = ":"
@@ -22,12 +22,12 @@ NEW_LINE = "\n"
 def main(haskellFile):
     '''
     Open haskell file haskell.hs
-    Create new haskell file haskell-haskython.py
+    Create new haskell file haskell_haskython.py
     Converts haskell code to Python code
     Append Python code to new file
     '''
     curr_file = open(haskellFile, "r")
-    new_file = open(f"{haskellFile[0:-3]}-haskython.py", "w")
+    new_file = open(f"{haskellFile[0:-3]}_haskython.py", "w")
 
     for line in haskellToPython(curr_file.readlines()):
         new_file.write(line)
@@ -153,6 +153,7 @@ def collectFunctionMethod(code, parameters):
         subseq_param = f", integer{i-1}"
         if subseq_param in return_line:
             return_line = return_line.replace(subseq_param, f"{subseq_param},")
+    print(code, parameters)
     return return_line
 
 
