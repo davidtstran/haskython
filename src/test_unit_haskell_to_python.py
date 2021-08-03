@@ -20,8 +20,8 @@ class TestUnitHaskellToPython(unittest.TestCase):
 
     def test_parseChoices(self):
         choice = "incList (x:xs) = x+1 : incList xs"
-        expected = "\n\telse:\n\t\t"
-        expected += "returnList = [integer_list0[0]+1]"
+        expected = "\n\telse:"
+        expected += "\n\t\treturnList = [integer_list0[0]+1]"
         expected += "\n\t\treturnList.extend(incList(integer_list0[1:]))"
         expected += "\n\t\treturn returnList"
         pc = parseChoices(choice, 0)
